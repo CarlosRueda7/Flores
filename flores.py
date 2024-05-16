@@ -72,7 +72,7 @@ with st.sidebar:
 
 st.image('logo.jpg')
 st.title("Unab")
-st.write("Somos un equipo apasionado de profesionales dedicados a hacer la diferencia")
+st.write("CarlosRueda")
 st.write("""
          # Detección de flores
          """
