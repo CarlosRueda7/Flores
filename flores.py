@@ -69,15 +69,28 @@ with st.sidebar:
         st.image('rosa.jpg')
         st.title("Reconocimiento de imagen")
         st.subheader("Reconocimiento de imagen para flores")
+        st.markdown(
+            """
+            <span style='color:red'>This is First page
+            You can:
+            - Say Hi
+            - Send email
+            - Contact crueda578@unab.edu.co </span>
+            """,
+            unsafe_allow_html=True
+            )
+        confianza=st.slider("Seleccione el nivel de confianza %", 0,100,50)
 
-st.image('logo.jpg')
+col1,col2,col3=st.columns(3)
+with col2:
+    st.image('logo.jpg')
+    
 st.title("Unab")
 st.write("CarlosRueda")
 st.write("""
          # Detección de flores
          """
          )
-
 
 def import_and_predict(image_data, model, class_names):
     
@@ -115,3 +128,4 @@ else:
         st.text(f"Puntuación de confianza: {100 * np.max(score):.2f}%")
     else:
         st.text(f"No se pudo determinar el tipo de flor")
+
